@@ -36,7 +36,7 @@ Both fine-tuning mentions ask for judgment. One posting wants a candidate who kn
 
 ## What every list already has
 
-Chat-with-your-PDF turns up in four of the lists the pack read, and none of the versions publishes a retrieval number. The generic chatbot or GPT wrapper is a named red flag: [Landed](https://github.com/landedjobs/ai-engineer-portfolio-projects) lists "GPT-4 wrapper, no original work" among the patterns that get a candidate rejected on sight. A to-do app with GPT is CRUD with an API call attached; [Careery](https://careery.pro/blog/ai-careers/ai-engineer-project-ideas) puts it plainly: "A todo app with GPT doesn't prove AI engineering skills." Titanic, MNIST and IMDB notebooks are what [Let's Data Science](https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026) calls "zero signal." They are coursework. A résumé full of framework names is, to Conectia, being "fluent in the names of orchestration libraries, vague on what broke when they used them." Prompt engineering as a headline skill is dated: a 2024 [Hacker News hiring thread](https://news.ycombinator.com/item?id=39605588) said flatly, "Prompt engineering was novel 15 months ago."
+Chat-with-your-PDF is the second project on [Careery](https://careery.pro/blog/ai-careers/ai-engineer-project-ideas)'s list and the first on [Upskillist](https://www.upskillist.com/blog/10-ai-portfolio-examples-impress-recruiters/)'s, and none of the versions publishes a retrieval number. The generic chatbot or GPT wrapper is a named red flag: [Landed](https://github.com/landedjobs/ai-engineer-portfolio-projects) lists "GPT-4 wrapper, no original work" among the patterns that get a candidate rejected on sight. A to-do app with GPT is CRUD with an API call attached; [Careery](https://careery.pro/blog/ai-careers/ai-engineer-project-ideas) puts it plainly: "A todo app with GPT doesn't prove AI engineering skills." Titanic, MNIST and IMDB notebooks are what [Let's Data Science](https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026) calls "zero signal." They are coursework. A résumé full of framework names is, to Conectia, being "fluent in the names of orchestration libraries, vague on what broke when they used them." Prompt engineering as a headline skill is dated: a 2024 [Hacker News hiring thread](https://news.ycombinator.com/item?id=39605588) said flatly, "Prompt engineering was novel 15 months ago."
 
 Careery's own project list makes the same point about all six: "originality is overrated," and a well-built clone beats a poorly-built original. Measurement makes the difference.
 
@@ -78,3 +78,14 @@ The same checklist recurs, source after source:
 - https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026, portfolio advice
 - https://news.ycombinator.com/item?id=39605588, hiring thread
 - https://simonwillison.net/2025/Oct/7/vibe-engineering/, vibe engineering
+- https://job-boards.greenhouse.io/hasbro/jobs/4250645009, job posting
+- https://job-boards.greenhouse.io/cultureamp/jobs/8184634, job posting
+- https://job-boards.greenhouse.io/splitero/jobs/5162723008, job posting
+- https://job-boards.greenhouse.io/agencywithin/jobs/5056863007, job posting
+- https://job-boards.greenhouse.io/future/jobs/4683133005, job posting
+- https://job-boards.greenhouse.io/gitlab/jobs/8556658002, job posting
+- https://job-boards.greenhouse.io/implicit/jobs/8039713, job posting
+- https://job-boards.greenhouse.io/phizenix/jobs/5398766008, job posting
+- https://job-boards.greenhouse.io/rackner/jobs/4717776005, job posting
+- https://builtin.com/job/associate-ai-engineer/7105658, job posting
+- https://www.upskillist.com/blog/10-ai-portfolio-examples-impress-recruiters/, portfolio examples
