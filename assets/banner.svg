@@ -48,12 +48,11 @@
 </g><g transform="translate(984 120) scale(0.3125)">  <rect width="512" height="512" rx="96" fill="#0f1117"/>
   <rect x="9" y="9" width="494" height="494" rx="88" fill="none" stroke="#ef476f" stroke-opacity="0.35" stroke-width="6"/>
   <g fill="none" stroke="#ef476f" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="268" y="104" width="172" height="172" rx="30"/>
+    <rect x="268" y="96" width="180" height="180" rx="32"/>
   </g>
   <g fill="none" stroke="#f4f4f5" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M78 428 Q98 322 152 322"/>
-    <circle cx="164" cy="322" r="26" fill="#f4f4f5" stroke="none"/>
-    <path d="M214 300 L246 268" stroke-dasharray="8 22"/>
+    <circle cx="148" cy="360" r="42" fill="#f4f4f5" stroke="none"/>
+    <path d="M192 322 Q262 176 318 232" stroke-dasharray="6 30" stroke-width="22"/>
   </g>
 </g>
   <text x="640" y="380" text-anchor="middle" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="700" fill="#f4f4f5">five-ai-projects</text>

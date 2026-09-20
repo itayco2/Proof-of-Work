@@ -97,15 +97,14 @@ def librarian(a: str) -> str:
 
 
 def david(a: str) -> str:
-    # Goliath: a large outlined square in the accent; David: a small filled stone in ink, with its sling
+    # Goliath: a large outlined square in the accent; David: the stone in ink, with its flight path into the square
     return f"""
   <g {stroke(a)}>
-    <rect x="268" y="104" width="172" height="172" rx="30"/>
+    <rect x="268" y="96" width="180" height="180" rx="32"/>
   </g>
   <g {stroke(INK)}>
-    <path d="M78 428 Q98 322 152 322"/>
-    <circle cx="164" cy="322" r="26" fill="{INK}" stroke="none"/>
-    <path d="M214 300 L246 268" stroke-dasharray="8 22"/>
+    <circle cx="148" cy="360" r="42" fill="{INK}" stroke="none"/>
+    <path d="M192 322 Q262 176 318 232" stroke-dasharray="6 30" stroke-width="22"/>
   </g>"""
 
 
