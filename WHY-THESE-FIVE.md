@@ -1,6 +1,6 @@
 # Why these five
 
-The five projects in this repo were chosen from what hiring managers and interviewers say they check for, from what job postings actually list as requirements, and from what every existing portfolio-project list already repeats without differentiating anyone. The numbers below come from eleven job postings, read in full, and from the practitioners named alongside them, each linked to its source.
+The five projects in this repo were chosen from hiring research. Hiring managers and interviewers describe what they check for. Job postings list requirements. Existing portfolio-project lists repeat the same handful of ideas without differentiating anyone. The numbers below come from eleven job postings, read in full, and from the practitioners named alongside them, each linked to its source.
 
 ## What hiring managers say they look for
 
@@ -17,7 +17,7 @@ The five projects in this repo were chosen from what hiring managers and intervi
 
 ## What the postings list
 
-Eleven postings for AI Engineer, Applied AI Engineer and LLM Engineer were read in full in September 2026, from associate to senior — not a random sample.
+Eleven postings for AI Engineer, Applied AI Engineer and LLM Engineer were read in full in September 2026, from associate to senior, not a random sample.
 
 | Skill | Postings (of 11) |
 |---|---|
@@ -32,13 +32,13 @@ Eleven postings for AI Engineer, Applied AI Engineer and LLM Engineer were read 
 | Guardrails, safety, adversarial testing | 5 |
 | Fine-tuning | 2 |
 
-Both fine-tuning mentions ask for judgment, not for doing it: one posting wants a candidate who knows "when a smaller fine-tuned model outperforms" a frontier API, not one who fine-tunes as a default move.
+Both fine-tuning mentions ask for judgment. One posting wants a candidate who knows "when a smaller fine-tuned model outperforms" a frontier API.
 
 ## What every list already has
 
-Chat-with-your-PDF is the single most repeated idea across every list, and none of the versions on those lists publishes a retrieval number. The generic chatbot or GPT wrapper is a named red flag: [Landed](https://github.com/landedjobs/ai-engineer-portfolio-projects) lists "GPT-4 wrapper, no original work" among the patterns that get a candidate rejected on sight. A to-do app with GPT is CRUD with an API call attached; [Careery](https://careery.pro/blog/ai-careers/ai-engineer-project-ideas) puts it plainly: "A todo app with GPT doesn't prove AI engineering skills." Titanic, MNIST and IMDB notebooks are what [Let's Data Science](https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026) calls "zero signal" — coursework, not evidence of engineering judgment. A résumé full of framework names is, to Conectia, being "fluent in the names of orchestration libraries, vague on what broke when they used them." Prompt engineering as a headline skill is dated: a 2024 [Hacker News hiring thread](https://news.ycombinator.com/item?id=39605588) said flatly, "Prompt engineering was novel 15 months ago."
+Chat-with-your-PDF turns up in four of the lists the pack read, and none of the versions publishes a retrieval number. The generic chatbot or GPT wrapper is a named red flag: [Landed](https://github.com/landedjobs/ai-engineer-portfolio-projects) lists "GPT-4 wrapper, no original work" among the patterns that get a candidate rejected on sight. A to-do app with GPT is CRUD with an API call attached; [Careery](https://careery.pro/blog/ai-careers/ai-engineer-project-ideas) puts it plainly: "A todo app with GPT doesn't prove AI engineering skills." Titanic, MNIST and IMDB notebooks are what [Let's Data Science](https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026) calls "zero signal." They are coursework. A résumé full of framework names is, to Conectia, being "fluent in the names of orchestration libraries, vague on what broke when they used them." Prompt engineering as a headline skill is dated: a 2024 [Hacker News hiring thread](https://news.ycombinator.com/item?id=39605588) said flatly, "Prompt engineering was novel 15 months ago."
 
-Careery's own project list makes the same point about all six: "originality is overrated," and a well-built clone beats a poorly-built original — the difference is measurement, not the idea.
+Careery's own project list makes the same point about all six: "originality is overrated," and a well-built clone beats a poorly-built original. Measurement makes the difference.
 
 ## What makes a project credible
 
@@ -50,7 +50,7 @@ The same checklist recurs, source after source:
 - cost per unit and p50/p95 latency (Landed; [Conectia](https://conectia.pro/en/blog/how-to-hire-llm-engineers))
 - a failure write-up (Conectia)
 - tests, a Dockerfile or a Makefile, and real commit history (Let's Data Science; [Simon Willison](https://simonwillison.net/2025/Oct/7/vibe-engineering/))
-- three to six pinned repos, not thirty (Landed)
+- three to six pinned repos (Landed)
 
 ## How the five map onto that
 
@@ -64,17 +64,17 @@ The same checklist recurs, source after source:
 
 ## Sources
 
-- https://www.kore1.com/llm-engineer-interview-questions/ — eval question
-- https://eugeneyan.com/writing/how-to-interview/ — eval questions
-- https://chiraghasija.cc/posts/how-to-interview-ai-engineer-role-2026/ — interview advice
-- https://conectia.pro/en/blog/how-to-hire-llm-engineers — red flags
-- https://www.digitalapplied.com/blog/ai-developer-hiring-skills-that-matter-2026 — hiring checklist
-- https://www.kore1.com/hire-rag-engineers-2026/ — take-home test
-- https://github.com/landedjobs/ai-engineer-portfolio-projects — portfolio checklist
-- https://www.dover.com/blog/how-to-hire-ai-engineer-startups — screen-share questions
-- https://www.dataexpert.io/blog/ultimate-guide-ai-engineering-portfolios — portfolio guide
-- https://jobs.ashbyhq.com/orpex/af6f5f29-edf0-49e2-8664-faea7fe3ba5d — job posting
-- https://careery.pro/blog/ai-careers/ai-engineer-project-ideas — project ideas
-- https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026 — portfolio advice
-- https://news.ycombinator.com/item?id=39605588 — hiring thread
-- https://simonwillison.net/2025/Oct/7/vibe-engineering/ — vibe engineering
+- https://www.kore1.com/llm-engineer-interview-questions/, eval question
+- https://eugeneyan.com/writing/how-to-interview/, eval questions
+- https://chiraghasija.cc/posts/how-to-interview-ai-engineer-role-2026/, interview advice
+- https://conectia.pro/en/blog/how-to-hire-llm-engineers, red flags
+- https://www.digitalapplied.com/blog/ai-developer-hiring-skills-that-matter-2026, hiring checklist
+- https://www.kore1.com/hire-rag-engineers-2026/, take-home test
+- https://github.com/landedjobs/ai-engineer-portfolio-projects, portfolio checklist
+- https://www.dover.com/blog/how-to-hire-ai-engineer-startups, screen-share questions
+- https://www.dataexpert.io/blog/ultimate-guide-ai-engineering-portfolios, portfolio guide
+- https://jobs.ashbyhq.com/orpex/af6f5f29-edf0-49e2-8664-faea7fe3ba5d, job posting
+- https://careery.pro/blog/ai-careers/ai-engineer-project-ideas, project ideas
+- https://letsdatascience.com/blog/the-ml-portfolio-that-actually-gets-you-hired-in-2026, portfolio advice
+- https://news.ycombinator.com/item?id=39605588, hiring thread
+- https://simonwillison.net/2025/Oct/7/vibe-engineering/, vibe engineering
