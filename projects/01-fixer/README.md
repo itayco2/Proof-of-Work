@@ -70,8 +70,9 @@ who measured it and is linked under Sources. The numbers you get are yours to pu
 
 - mini-SWE-agent, 100 lines of Python, reports above 74% on the full 500-instance Verified set with
   frontier models.
-- A 2025 survey of the SWE-bench leaderboards puts the Agentless-1.5 workflow at 50.8% on Verified
-  and the OpenHands platform at 65.8%. Both are open scaffolds you can read.
+- A 2025 survey of the SWE-bench leaderboards collects the open scaffolds of the Claude 3.5 Sonnet
+  era, OpenHands with CodeAct v2.1 and Agentless-1.5. Read their resolved rates off the survey, and
+  their loops off their repositories.
 - Published cost per instance for bash-only scaffolds is not available from swebench.com any more,
   so there is no figure to sit beside. Log your own dollars per instance and publish that.
 
@@ -140,8 +141,8 @@ Epoch AI measured about 8 seconds a sample and 62 to 70 minutes for the full 500
   https://github.com/SWE-agent/mini-swe-agent/
 - Community reproduction of the bash-only leaderboard, February 2026, published after the official
   cost table went offline: https://dev.to/kyoma_1234/how-a-002call-model-scored-782-on-swe-bench-verified-beating-every-model-on-the-leaderboard-4bm3
-- Survey of the SWE-bench leaderboards, 2025 (Agentless-1.5 50.8% on Verified, OpenHands 65.8%):
-  https://arxiv.org/pdf/2506.17208
+- Survey of the SWE-bench leaderboards, 2025 (the scaffolds it collects include OpenHands with
+  CodeAct v2.1 and Agentless-1.5): https://arxiv.org/pdf/2506.17208
 - Claude pricing, September 2026: https://platform.claude.com/docs/en/about-claude/pricing
 - Orpex, Applied AI Engineer posting:
   https://jobs.ashbyhq.com/orpex/af6f5f29-edf0-49e2-8664-faea7fe3ba5d

@@ -54,12 +54,19 @@ Seven phases. One commit per checkpoint, and no phase starts before the previous
 ### Phase 1: skeleton
 
 Do: write a `Makefile` with the targets `setup`, `gate`, `test`, `ingest`, `index`, `eval`, `bench`
-and `serve`. Write `scripts/gate.py` that checks the Python version, imports every dependency, opens
-the database, loads the embedding model, builds a 10-document smoke index in a temporary directory
-and answers one query from it. Add one unit test so `make test` has something to run.
+and `serve`. Write `scripts/gate.py` that checks the Python version, checks that `sqlite3` can load
+extensions and names the fix when it cannot, imports every dependency, opens the database, loads the
+embedding model, builds a 10-document smoke index in a temporary directory and answers one query from
+it. Add one unit test so `make test` has something to run.
 
-Done when: `make gate` passes on a clean checkout and the 10-document smoke index answers 1 query in
-under 1 second.
+sqlite-vec is a loadable extension, and the python3 that ships with macOS is built without extension
+loading, so on that interpreter `sqlite3.Connection` has no `enable_load_extension` method at all. The
+gate looks for that method before anything else reaches the vector store, and when it is missing it
+tells me to rebuild the venv from a python.org or Homebrew interpreter instead of failing later inside
+`make index`.
+
+Done when: `make gate` passes on a clean checkout, the 10-document smoke index answers 1 query in
+under 1 second, and the gate's output names the extension-loading check.
 
 Verify: `make gate`.
 

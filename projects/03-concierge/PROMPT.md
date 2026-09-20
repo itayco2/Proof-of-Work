@@ -22,7 +22,10 @@ Ask me all of this in one numbered message, then wait for my answers. Do not wri
    a local SQLite file with real rows, never a hosted service and never a stub that pretends.
 4. Stack: a speech-to-speech API, a pipeline of separate speech-to-text, model and speech-synthesis
    APIs, or fully local.
-5. The language spoken in the conversation.
+5. The language spoken in the conversation. Say with the question that on the local path Kokoro has
+   voices for English, Japanese, Mandarin, Spanish, French, Hindi, Italian and Portuguese, and that
+   any other language means Piper for the local voice or the API path, so I pick the language and the
+   voice together.
 6. Budget cap in dollars.
 7. Time budget, in evenings or days.
 
@@ -50,8 +53,12 @@ row per backend actually run, and the README says which two they were.
 
 Do: a Makefile with `setup`, `gate`, `test`, `serve`, `bench`, `test-interrupt` and `eval` targets.
 `make gate` pushes one 5-second WAV through speech to text, the model and synthesis with no
-microphone in the loop, and asserts that each component loaded and produced output. Add one unit test
-over the timestamp arithmetic so the percentile code is exercised before any audio exists.
+microphone in the loop, and asserts that each component loaded and produced output. Before it loads
+anything, the gate checks the binaries pip cannot install for you: Kokoro's phonemizer calls
+`espeak-ng`, so look for that binary on the path first and print `brew install espeak-ng` (or the
+apt-get line on Linux) when it is missing, instead of failing later inside synthesis with an error
+that never names the package. Add one unit test over the timestamp arithmetic so the percentile code
+is exercised before any audio exists.
 
 Done when: `make gate` passes and a 5-second WAV becomes a spoken reply WAV in under 10 seconds.
 
