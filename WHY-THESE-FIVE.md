@@ -17,7 +17,7 @@ The five projects in this repo were chosen from hiring research. Hiring managers
 
 ## What the postings list
 
-Eleven postings for AI Engineer, Applied AI Engineer and LLM Engineer were read in full in September 2026, from associate to senior, not a random sample.
+Eleven postings for AI Engineer, Applied AI Engineer and LLM Engineer were read in full in September 2026, from associate to senior, not a random sample. They are [Hasbro](https://job-boards.greenhouse.io/hasbro/jobs/4250645009), [Culture Amp](https://job-boards.greenhouse.io/cultureamp/jobs/8184634), [Splitero](https://job-boards.greenhouse.io/splitero/jobs/5162723008), [WITHIN](https://job-boards.greenhouse.io/agencywithin/jobs/5056863007), [Future](https://job-boards.greenhouse.io/future/jobs/4683133005), [GitLab](https://job-boards.greenhouse.io/gitlab/jobs/8556658002), [Implicit](https://job-boards.greenhouse.io/implicit/jobs/8039713), [Phizenix](https://job-boards.greenhouse.io/phizenix/jobs/5398766008), [Rackner](https://job-boards.greenhouse.io/rackner/jobs/4717776005), [Orpex](https://jobs.ashbyhq.com/orpex/af6f5f29-edf0-49e2-8664-faea7fe3ba5d) and [Exadel](https://builtin.com/job/associate-ai-engineer/7105658). The counts in the table below are of those eleven.
 
 | Skill | Postings (of 11) |
 |---|---|
