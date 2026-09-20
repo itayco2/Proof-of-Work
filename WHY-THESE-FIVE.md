@@ -59,7 +59,7 @@ The same checklist recurs, source after source:
 | Fixer | Agents, sandboxing, evals, cost per task | Percent of SWE-bench Verified-mini (50 instances) resolved, and dollars per instance | mini-SWE-agent scores above 74% on Verified with frontier models; 2024 scaffolds scored 50 to 53% with Claude 3.5 Sonnet |
 | Scholar | Orchestration, context engineering, faithfulness evals, prompt-injection defence | Citation precision and recall on a 50-question set; minutes and dollars per report | ALCE citation recall and precision for ChatGPT: 73.6 and 72.5 on ASQA, 51.1 and 50.0 on ELI5 |
 | Concierge | Streaming, latency engineering, tool use, conversation evals | p50 and p95 from end of speech to first audio; task completion over 30 scripted conversations | Hosted speech-to-speech p50 of 1,064 ms on Gemini Live and 1,253 ms on OpenAI Realtime; text agents at 85% task completion against 31 to 51% for voice |
-| Librarian | Retrieval engineering, serving, cost, evals | recall@10 and nDCG@10 on 200 or more labelled questions, before and after each retrieval step; dollars per query | BM25 about 0.41 nDCG@10 on a BEIR subset; bge-small about 0.54 on MTEB retrieval |
+| Librarian | Retrieval engineering, serving, cost, evals | recall@10 and nDCG@10 on 200 or more labelled questions, before and after each retrieval step; p95 latency; dollars per query | BM25 about 0.41 nDCG@10 on a BEIR subset; bge-small about 0.54 on MTEB retrieval |
 | David | Fine-tuning judgment, evals, cost | Small model versus frontier model on a held-out set; cost ratio per thousand requests | 310 fine-tunes on LoRA Land: 4-bit LoRA models beat GPT-4 by 10 points on average |
 
 ## Sources
