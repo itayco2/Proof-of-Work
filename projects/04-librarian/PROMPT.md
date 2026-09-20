@@ -131,9 +131,11 @@ Checkpoint: commit "rerank".
 
 ### Phase 6: scale and serve
 
-Do: ingest and index the full corpus. Build a single-page search UI with a query box, the top results
-showing source and score, the latency of that query, and the eval table with the date each row was
-produced. Measure p50 and p95 over 200 queries. Log the cost per query for each backend.
+Do: ingest and index the full corpus. Build a single-page search UI with a query box, the top
+results showing source and score, the latency of that query, and the eval table with the date each
+row was produced. Measure p50 and p95 over 200 queries. Log the cost per query for each backend. If
+the measured p95 at 1,000,000 chunks exceeds the budget, add binary quantization to the vector index
+with a float rescoring pass over the shortlist, and report p95 before and after.
 
 Done when: 1,000,000 chunks are indexed, the page serves at localhost, and p95 is under 500 ms on the
 final configuration on the API path, or under 500 ms for retrieval with the rerank step timed on its

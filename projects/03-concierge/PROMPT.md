@@ -60,7 +60,9 @@ apt-get line on Linux) when it is missing, instead of failing later inside synth
 that never names the package. Add one unit test over the timestamp arithmetic so the percentile code
 is exercised before any audio exists.
 
-Done when: `make gate` passes and a 5-second WAV becomes a spoken reply WAV in under 10 seconds.
+Done when: `make gate` passes and a 5-second WAV becomes a spoken reply WAV. On the `api` path that
+happens in under 10 seconds. On the `local` path, write down the seconds you actually got and name the
+model that produced it, and leave cutting the number to Phase 6.
 
 Verify: `make gate`.
 

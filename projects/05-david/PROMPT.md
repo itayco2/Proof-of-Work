@@ -65,11 +65,13 @@ throughput and the p50 and p95 latency beside that figure.
 
 ### Phase 1: skeleton
 
-Do: write the Makefile with targets `setup`, `gate`, `test`, `data`, `baseline`, `train`,
+Do: write the Makefile with targets `setup`, `gate`, `test`, `data`, `baseline`, `train`, `fuse`,
 `eval-dev`, `eval` and `serve`. `make setup` installs the dependencies and runs every model pull the
 config names, printing each command as it runs it, so a fresh clone needs no manual pull. Write the
 gate: it detects the GPU or MLX runtime and prints what it found, downloads the base model, runs one forward pass, loads the dataset, and runs the metric on a
-toy case whose answer you worked out by hand. Write one unit test for the metric on that toy case.
+toy case whose answer you worked out by hand. If it finds no local GPU and no MLX runtime and I named
+Colab in the interview, it passes and prints that training runs on Colab; the rest of its checks run
+on CPU. Write one unit test for the metric on that toy case.
 Done when: `make gate` passes and the base model answers 10 examples with the metric printed.
 Verify: `make gate`. Checkpoint: "skeleton".
 
@@ -103,9 +105,12 @@ first and check the loss falls, then the full run. Write a training log with the
 hyperparameters, and the wall-clock time. Evaluate on the 200-example dev slice only, never on the
 held-out set. On Colab's free T4, where `make train` cannot run, commit the notebook, download the
 adapter into `adapters/`, and have `make train` check that adapter's presence and hash instead of
-training. Done when: the fine-tuned model beats the base model by at least 10 points on the
+training. That download is a LoRA adapter, which Ollama will not load as it stands, so merge it into
+the base weights, convert the merged weights to GGUF with llama.cpp's converter, and `ollama create`
+from a Modelfile. That is what `make fuse` does, and on the `mlx` path it prints that there is
+nothing to convert. Name in `cost.md` the backend that scored each local row. Done when: the fine-tuned model beats the base model by at least 10 points on the
 200-example dev slice, or the dev ceiling you measured is written into `PREFLIGHT.md` and I have told
-you to carry that result into the comparison. Verify: `make train && make eval-dev`. Checkpoint:
+you to carry that result into the comparison. Verify: `make train && make fuse && make eval-dev`. Checkpoint:
 "fine-tuned".
 
 ### Phase 5: the comparison

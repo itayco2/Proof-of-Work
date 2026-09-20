@@ -21,7 +21,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 URL = re.compile(r"https?://[^\s<>()\[\]\"'`]+")
-HEADERS = {"User-Agent": "Mozilla/5.0 (five-ai-projects link check; +https://github.com/itayco2/five-ai-projects)"}
+# Present as a desktop browser: a reasonable default for a script that fetches public pages, and
+# Accept / Accept-Language are simply what a browser sends. It is not what fixed the false dead
+# links here, and no site in these docs was found to gate on the User-Agent. The real cause is the
+# method: some servers answer HEAD with 404 while serving the same page fine on GET, so probe()
+# retries a HEAD 404 with GET rather than trusting it.
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 SKIP_STATUSES = {403, 405, 429}
 DEAD_STATUSES = {404, 410}
 
@@ -45,7 +57,7 @@ def probe(url: str, timeout: float = 8.0):
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.status
         except urllib.error.HTTPError as e:
-            if method == "HEAD" and e.code in (400, 403, 405):
+            if method == "HEAD" and e.code in (400, 403, 404, 405):
                 continue
             return e.code
         except Exception as e:  # timeouts, DNS, TLS

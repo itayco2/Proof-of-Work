@@ -55,20 +55,24 @@ zero.
 Do: write the Makefile with the targets setup, gate, test, run, grade, taxonomy and demo. `make
 gate` checks four things and prints one line for each: Docker starts a container, the Verified-mini
 dataset downloads and holds 50 rows, one instance's container starts with the repository at the
-expected commit, and the configured model answers one short message on the selected backend. Write
-one unit test for the instance loader, over a fixture row, with no network and no container.
+expected commit, and the configured model answers one short message on the selected backend. Put a
+wall-clock cap per instance in the config file before the first instance runs: when the cap is hit,
+that instance stops and the reason goes into the run log next to its minutes. Write one unit test
+for the instance loader, over a fixture row, with no network and no container.
 Done when: `make gate` passes and 1 instance runs end to end and writes a patch file, right or
-wrong, in under 15 minutes, with its wall-clock minutes written to the run log.
+wrong, with its wall-clock minutes in the run log. On the `api` path that instance finishes in under
+15 minutes. On the `local` path, set the cap to what the machine can afford, and write down the
+minutes you got and the model that produced them.
 Verify: `make gate && make test && make run N=1`
 Checkpoint: commit "skeleton".
 
 ### Phase 2: the loop
 
 Do: the agent loop with exactly one bash tool, executed inside the container; a step cap of 60; a
-cost cap and a wall-clock cap per instance, both read from the config file; a transcript per
-instance saved under `runs/`, one JSON line per step with the command, the output, the token counts
-and the running cost. When any cap is hit, stop that instance and write the reason into its
-transcript.
+cost cap per instance beside the wall-clock cap Phase 1 set, read from the same config file; a
+transcript per instance saved under `runs/`, one JSON line per step with the command, the output,
+the token counts and the running cost. When any cap is hit, stop that instance and write the reason
+into its transcript.
 Done when: 5 instances run with a transcript and a patch each, all 5 patches apply cleanly with
 `git apply`, and each instance has its stop reason recorded. On the API backend, at least 1 of the 5
 is also graded as resolved.

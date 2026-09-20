@@ -19,8 +19,9 @@ Beside the system sits what the interview question below is asking for: a labell
 least 200 questions, and a table that reports recall@10 and nDCG@10 for each retrieval step in turn,
 one row per step and per backend.
 
-The demo is a page that answers a hard question over a huge corpus in under half a second, with the
-measurement on it.
+The demo is a page that answers a hard question over a huge corpus in under half a second on the API
+or GPU path, with the measurement on it. The local budget is retrieval p95 under 500 ms, with the
+rerank step timed on its own line.
 
 ## Why it gets interviews
 

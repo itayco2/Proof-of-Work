@@ -1,16 +1,17 @@
 ![David icon](icon.png)
 
-# David: a small model that beats a frontier model at one job
+# David: a small fine-tune measured against a frontier model
 
 ## What you build
 
-A QLoRA fine-tune of a small open model on one narrow task, trained until it beats a frontier API
-model on a held-out set that was frozen before any model saw it. The deliverable is one table: the
-base small model, the same model after fine-tuning, and at least one frontier model, all scored on
-the same examples, each row carrying a 95% interval and a cost per 1,000 requests.
+A QLoRA fine-tune of a small open model on one narrow task, measured against a frontier API model
+on a held-out set that was frozen before any model saw it. The deliverable is one table: the base
+small model, the same model after fine-tuning, and at least one frontier model, all scored on the
+same examples, each row carrying a 95% interval and a cost per 1,000 requests.
 
-The sentence you earn the right to say in an interview: "a model I trained for the price of lunch
-beats the best API at this." You will have the table to back it.
+What you earn is the right to say which way the comparison went and why, and to defend the way it
+was set up: one frozen split under every row, with equal effort spent on both prompts. A win and a
+loss both hold up on those terms.
 
 ## Why it gets interviews
 
@@ -94,8 +95,8 @@ For the frontier side without a card on file, use the Gemini API free tier, or t
 Ollama can run on the machine. The free tier covers the Flash and Flash-Lite classes; Gemini 3.1 Pro
 sits on the paid tier. A local 8B model is a weaker Goliath than Opus 5, so label the row for what it
 is and say so beside the table. A beaten 8B baseline is not a beaten frontier model. The honest
-headline on the free path is "beats a Flash-class or local 8B baseline"; "beats the best API" belongs
-to the paid path.
+headline on the free path is "beats a Flash-class or local 8B baseline". A headline that names a
+frontier model belongs to the paid path.
 
 ## Time and money
 
