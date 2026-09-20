@@ -1,0 +1,6 @@
+# Tier 1: the fast suite. Every push, blocking, owns the CI badge.
+#
+# Deliberately minimal: this repo is prose and prompts, so its tests need nothing but pytest.
+# Adding a dependency here turns a one-second CI run into a slow one, and a slow badge is a
+# badge nobody trusts.
+pytest==9.1.1
