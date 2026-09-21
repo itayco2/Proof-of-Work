@@ -4,7 +4,7 @@
 
 Five portfolio projects that make an AI engineer's GitHub say "you built that?", each with a hands-on guide and a master prompt that lets Claude Code build it with you.
 
-[![tests](https://github.com/itayco2/proof-of-work/actions/workflows/tests.yml/badge.svg)](https://github.com/itayco2/proof-of-work/actions/workflows/tests.yml)
+[![tests](https://github.com/itayco2/Proof-of-Work/actions/workflows/tests.yml/badge.svg)](https://github.com/itayco2/Proof-of-Work/actions/workflows/tests.yml)
 [![code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
 [![content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey)](LICENSE-CONTENT)
 
