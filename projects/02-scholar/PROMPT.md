@@ -79,12 +79,14 @@ Checkpoint: commit "single agent".
 Do: sentence splitting; for every cited sentence, an entailment check of the sentence by the passage
 it cites; citation recall and precision per the ALCE definitions; a unit test on a toy report where
 the right answer is known by hand, including one sentence with a citation that does not support it.
-Then read 30 graded sentences yourself and record where you disagree with the grader: record your 30
-labels in `eval/handcheck.jsonl`, pooled across the phase-2 reports and the toy test set. `make grade`
-reads that file and prints the agreement count out of 30 beside P and R.
+Then build `make handcheck`: it shows me 30 graded sentences one at a time, pooled across the
+phase-2 reports and the toy test set, each beside the passage it cites and without the grader's
+verdict, and records my yes or no in `eval/handcheck.jsonl`. The labels must be mine. Never write one
+yourself: the check exists to test the grader against a person, and your labels would test it
+against a model. `make grade` reads that file and prints the agreement count out of 30 beside P and R.
 Done when: the grader prints P and R for the 5 reports from phase 2, and the hand-check of 30 graded
 sentences agrees with the grader on at least 24.
-Verify: `make grade`.
+Verify: `make handcheck`, where I label the 30, then `make grade`.
 Checkpoint: commit "grader".
 
 ### Phase 4: orchestrator
@@ -173,5 +175,5 @@ looks necessary, tell me why and stop; do not build it.
 1. Clone the repo fresh into a new folder. `make setup && make gate` passes with no manual step beyond copying `.env.example` to `.env`.
 2. One end-to-end run produces the headline number, and the README shows that same number next to the command that produced it.
 3. Every claim in the README has its reproduction command, every row in the eval table has a date, and `PREFLIGHT.md` has at least one row.
-4. `git log` shows one commit per checkpoint, and `git log -p | grep -i "sk-\|api_key="` finds nothing.
+4. `git log` shows one commit per checkpoint. `.env` never entered the history: `git log --all -- .env` prints nothing. No key was pasted into code either: `git log -p -- . ':!.env.example' | grep -E 'sk-(ant|proj|svcacct)-|sk-[A-Za-z0-9]{40,}|AIza[0-9A-Za-z_-]{35}'` finds nothing. Neither check trips on the empty key names in `.env.example`, or on code that reads a key from the environment.
 5. Tell me the three numbers I should say first in an interview about this project, and where each one came from.

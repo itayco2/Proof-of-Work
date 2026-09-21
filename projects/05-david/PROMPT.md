@@ -167,5 +167,5 @@ adds nothing a reader will check.
 1. Clone the repo fresh into a new folder. `make setup && make gate` passes with no manual step beyond copying `.env.example` to `.env`.
 2. One end-to-end run produces the headline number, and the README shows that same number next to the command that produced it.
 3. Every claim in the README has its reproduction command, every row in the eval table has a date, and `PREFLIGHT.md` has at least one row.
-4. `git log` shows one commit per checkpoint, and `git log -p | grep -i "sk-\|api_key="` finds nothing.
+4. `git log` shows one commit per checkpoint. `.env` never entered the history: `git log --all -- .env` prints nothing. No key was pasted into code either: `git log -p -- . ':!.env.example' | grep -E 'sk-(ant|proj|svcacct)-|sk-[A-Za-z0-9]{40,}|AIza[0-9A-Za-z_-]{35}'` finds nothing. Neither check trips on the empty key names in `.env.example`, or on code that reads a key from the environment.
 5. Tell me the three numbers I should say first in an interview about this project, and where each one came from.
