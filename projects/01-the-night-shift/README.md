@@ -1,6 +1,6 @@
-![Fixer icon](icon.png)
+![The Night Shift icon](icon.png)
 
-# Fixer: a coding agent scored on SWE-bench
+# The Night Shift, a coding agent scored on SWE-bench
 
 ## What you build
 

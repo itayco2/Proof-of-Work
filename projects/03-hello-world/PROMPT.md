@@ -1,10 +1,10 @@
-# Concierge: master prompt
+# Hello, World, the master prompt
 
 Paste this into Claude Code in an empty repository.
 
 ## Goal
 
-Build Concierge, a real-time voice agent in the browser that listens, can be interrupted, calls tools
+Build Hello, World, a real-time voice agent in the browser that listens, can be interrupted, calls tools
 mid-conversation, and books an appointment on a local calendar, with a latency budget measured per
 turn.
 
@@ -39,7 +39,7 @@ Phase 1.
 
 Build one interface for every model call and at least two backends behind it: the API I chose in the interview, and Ollama for the local path. One switch selects the backend: the environment variable `MODEL_BACKEND` (`api` or `local`), overridden by a `--backend` flag. Model names, endpoints and prices live in one config file, never at call sites. The eval, the cost log and the latency log run unchanged on both backends, and every results table has one row per backend. On the local path, run `ollama list` before choosing a model and pick the largest model that fits the RAM I told you about; if nothing suitable is installed, tell me the `ollama pull` command and stop. Expect the local path to score lower and run slower. Say so in the README beside the numbers; never hide it.
 
-For Concierge that interface covers three kinds of call: speech to text, the model, and speech
+For Hello, World that interface covers three kinds of call: speech to text, the model, and speech
 synthesis. Each one gets an API backend and a local backend behind the same signature.
 `MODEL_BACKEND` switches all three together, and a mixed pipeline such as a hosted speech-to-text
 service in front of a local model needs its own flag and its own row in every table. If I answered

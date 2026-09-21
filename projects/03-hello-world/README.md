@@ -1,6 +1,6 @@
-![Concierge icon](icon.png)
+![Hello, World icon](icon.png)
 
-# Concierge: a real-time voice agent
+# Hello, World, a real-time voice agent
 
 ## What you build
 

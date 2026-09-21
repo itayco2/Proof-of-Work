@@ -5,15 +5,22 @@ into Claude Code as your first message, answer an interview, approve the spec it
 through phases that each end in a number you can check. This page is the mechanics of that, on an
 API key or free and local. [Why these five](WHY-THESE-FIVE.md) covers the choice of projects.
 
+|  | Project | Prompt |
+|---|---|---|
+| <img src="assets/the-night-shift-128.png" width="56"> | [The Night Shift](projects/01-the-night-shift/) | [PROMPT.md](projects/01-the-night-shift/PROMPT.md) |
+| <img src="assets/citation-needed-128.png" width="56"> | [Citation Needed](projects/02-citation-needed/) | [PROMPT.md](projects/02-citation-needed/PROMPT.md) |
+| <img src="assets/hello-world-128.png" width="56"> | [Hello, World](projects/03-hello-world/) | [PROMPT.md](projects/03-hello-world/PROMPT.md) |
+| <img src="assets/needle-in-a-haystack-128.png" width="56"> | [Needle in a Haystack](projects/04-needle-in-a-haystack/) | [PROMPT.md](projects/04-needle-in-a-haystack/PROMPT.md) |
+| <img src="assets/david-vs-goliath-128.png" width="56"> | [David vs Goliath](projects/05-david-vs-goliath/) | [PROMPT.md](projects/05-david-vs-goliath/PROMPT.md) |
+
 ## Install Claude Code
 
 Claude Code runs in your terminal. Install it and sign in with your Claude account by following the
 quickstart: https://code.claude.com/docs/en/quickstart. A working `claude` command inside an empty
 folder is the whole setup.
 
-The prompts are plain Markdown, so they also work as a first message in Cursor or Codex; in those
-tools, save a copy of the `CLAUDE.md` the build writes as `AGENTS.md`, so the rules survive a new
-session.
+The prompts are plain Markdown, so they also work as a first message in Cursor or Codex; save the
+`CLAUDE.md` the build writes as `AGENTS.md` there, so the rules survive a new session.
 
 ## Start in an empty folder
 
@@ -21,13 +28,11 @@ A fresh folder with its own git history keeps the phase commits readable, and a 
 the prompt's final verification checks at the end.
 
 ```bash
-mkdir fixer && cd fixer && git init
+mkdir night-shift && cd night-shift && git init
 ```
 
-Pick a project and copy its `PROMPT.md` into that folder: [Fixer](projects/01-fixer/),
-[Scholar](projects/02-scholar/), [Concierge](projects/03-concierge/),
-[Librarian](projects/04-librarian/), [David](projects/05-david/). Read the project's guide first if
-you have not already. It says what the build measures and how long it tends to take.
+Copy a project's `PROMPT.md` from the table above into that folder. Read its guide first if you have
+not already; it says what the build measures and how long it tends to take.
 
 ## Paste the prompt
 
@@ -68,8 +73,7 @@ number in the message, so you can go back to the last state that measured well.
 When a phase goes wrong twice, stop instead of trying a third time in the same session. Run
 `/clear`, then start the phase again, putting what you learned into the first message. Anthropic's
 own guidance is to clear context between tasks rather than carry a long session forward:
-https://code.claude.com/docs/en/best-practices. A session that keeps missing the same way usually
-has a full context window behind it.
+https://code.claude.com/docs/en/best-practices.
 
 ## Free and local
 
@@ -88,11 +92,11 @@ fits the RAM you named in the interview. If nothing suitable is installed, it pr
 
 What each build uses on this path:
 
-- Fixer: an Ollama coding model behind the agent scaffold, with Docker for the sandbox.
-- Scholar: keyless web search and a small entailment model on CPU as the citation grader.
-- Concierge: faster-whisper for speech to text, Ollama for the reply, Kokoro for the voice.
-- Librarian: local embeddings, SQLite full-text and vector search, and a local reranker.
-- David: Colab's free T4, which needs a Google account, or Apple Silicon for the fine-tune.
+- The Night Shift: an Ollama coding model behind the agent scaffold, with Docker for the sandbox.
+- Citation Needed: keyless web search and a small entailment model on CPU as the citation grader.
+- Hello, World: faster-whisper for speech to text, Ollama for the reply, Kokoro for the voice.
+- Needle in a Haystack: local embeddings, SQLite full-text and vector search, and a local reranker.
+- David vs Goliath: Colab's free T4, which needs a Google account, or Apple Silicon for the fine-tune.
 
 Scores come out lower here and turns take longer. The bill is $0 for what the build calls. Claude
 Code itself needs a paid Claude plan, or you can paste the prompts into another agent's free tier.
@@ -101,10 +105,10 @@ gets one row per backend, so the gap between them is on the page instead of hidd
 
 ## With an API
 
-One key from Anthropic, OpenAI or Gemini covers the model calls in all five builds. Two of them take
-a second key, and one needs a GPU. Scholar takes a search key, from Tavily or Brave, if you would
-rather not use the keyless path. Concierge takes speech keys when you want hosted speech to text and
-hosted voice. David needs rented GPU time, or Colab instead. Its guide gives the hours and the cost.
+One key from Anthropic, OpenAI or Gemini covers the model calls in all five builds. Two of them
+take a second key, and one needs a GPU: Citation Needed for search, Tavily or Brave, unless you use
+the keyless path; Hello, World for hosted speech to text and voice; and David vs Goliath for rented
+GPU time or Colab, with the hours and cost in its guide.
 
 Keys live in `.env`, loaded at startup and listed in `.env.example` with empty values. `.env` goes
 into `.gitignore` in the first commit, and nothing ever prints a key. The final verification greps
@@ -137,10 +141,10 @@ people who published them, linked where they appear.
 
 ## If something breaks
 
-Run `make gate` in the built project first. It runs the checks that project depends on, prints one
-line for each and names the one that failed: Docker and the dataset for Fixer, search and the
-entailment model for Scholar, the speech pipeline for Concierge, the database and the index for
-Librarian, the GPU or MLX runtime for David.
+Run `make gate` in the built project first. It runs the checks that project depends on and names
+the one that failed: Docker and the dataset (The Night Shift), search and the entailment model
+(Citation Needed), the speech pipeline (Hello, World), the database and the index (Needle in a
+Haystack), the GPU or MLX runtime (David vs Goliath).
 
 Then read your own `PREFLIGHT.md`. A defect you fixed once tends to return after a refactor, and
 the row tells you which number catches it.

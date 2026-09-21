@@ -27,11 +27,11 @@ PAPER, INK, MUTE = "#f3efe6", "#141413", "#7a766c"
 
 # folder, thumbnail name, accent (the shadow colour on the banner)
 PROJECTS = [
-    ("01-fixer", "fixer", "#f5a623"),
-    ("02-scholar", "scholar", "#8b7cf6"),
-    ("03-concierge", "concierge", "#2dd4bf"),
-    ("04-librarian", "librarian", "#4f9cf9"),
-    ("05-david", "david", "#ef476f"),
+    ("01-the-night-shift", "the-night-shift", "#f5a623"),
+    ("02-citation-needed", "citation-needed", "#8b7cf6"),
+    ("03-hello-world", "hello-world", "#2dd4bf"),
+    ("04-needle-in-a-haystack", "needle-in-a-haystack", "#4f9cf9"),
+    ("05-david-vs-goliath", "david-vs-goliath", "#ef476f"),
 ]
 FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800'
          '&family=IBM+Plex+Mono:wght@400;500&display=swap">')
@@ -56,7 +56,7 @@ def banner_html() -> str:
             '<div style="box-sizing:border-box;width:1280px;height:640px;padding:60px 72px;display:flex;flex-direction:column;gap:18px">'
             f'<div style="display:flex;justify-content:space-between;align-items:baseline">'
             f'<div style="font-family:\'Bricolage Grotesque\',\'Helvetica Neue\',sans-serif;font-weight:800;font-size:84px;'
-            f'letter-spacing:-0.03em;line-height:1;color:{INK}">five-ai-projects</div>'
+            f'letter-spacing:-0.03em;line-height:1;color:{INK}">Proof of Work</div>'
             f'<div style="font-family:\'IBM Plex Mono\',Menlo,monospace;font-size:22px;color:{MUTE}">free · open source</div></div>'
             f'<div style="font-family:\'IBM Plex Mono\',Menlo,monospace;font-size:26px;color:{INK}">'
             'Five AI projects, each with the master prompt that builds it.</div>'

@@ -1,6 +1,6 @@
-![David icon](icon.png)
+![David vs Goliath icon](icon.png)
 
-# David: a small fine-tune measured against a frontier model
+# David vs Goliath, a small fine-tune measured against a frontier model
 
 ## What you build
 

@@ -54,13 +54,13 @@ The same checklist recurs, source after source:
 
 ## How the five map onto that
 
-| Project | Skills it proves | Headline number | Published number it sits beside |
-|---|---|---|---|
-| Fixer | Agents, sandboxing, evals, cost per task | Percent of SWE-bench Verified-mini (50 instances) resolved, and dollars per instance | mini-SWE-agent reports above 74% on the full 500-instance Verified set with frontier models; the open scaffolds of the Claude 3.5 Sonnet era are collected in a 2025 leaderboard survey, which carries their resolved rates |
-| Scholar | Orchestration, context engineering, faithfulness evals, prompt-injection defence | Citation precision and recall on a 50-question set; minutes and dollars per report | ALCE citation recall and precision for ChatGPT: 73.6 and 72.5 on ASQA, 51.1 and 50.0 on ELI5 |
-| Concierge | Streaming, latency engineering, tool use, conversation evals | p50 and p95 from end of speech to first audio; task completion over 30 scripted conversations | Hosted speech-to-speech p50 of 1,064 ms on Gemini Live and 1,253 ms on OpenAI Realtime; a text agent at 85% task completion against 31 to 51% for voice agents on clean audio |
-| Librarian | Retrieval engineering, serving, cost, evals | recall@10 and nDCG@10 on 200 or more labelled questions, before and after each retrieval step; p95 latency; dollars per query | bge-small-en-v1.5 at 51.68 on MTEB retrieval, averaged over 15 datasets |
-| David | Fine-tuning judgment, evals, cost | Small model versus frontier model on a held-out set; cost ratio per thousand requests | 310 fine-tunes on LoRA Land: 4-bit LoRA models beat GPT-4 by 10 points on average (April 2024) |
+|  | Project | Skills it proves | Headline number | Published number it sits beside |
+|---|---|---|---|---|
+| <img src="assets/the-night-shift-128.png" width="56"> | The Night Shift | Agents, sandboxing, evals, cost per task | Percent of SWE-bench Verified-mini (50 instances) resolved, and dollars per instance | mini-SWE-agent reports above 74% on the full 500-instance Verified set with frontier models; the open scaffolds of the Claude 3.5 Sonnet era are collected in a 2025 leaderboard survey, which carries their resolved rates |
+| <img src="assets/citation-needed-128.png" width="56"> | Citation Needed | Orchestration, context engineering, faithfulness evals, prompt-injection defence | Citation precision and recall on a 50-question set; minutes and dollars per report | ALCE citation recall and precision for ChatGPT: 73.6 and 72.5 on ASQA, 51.1 and 50.0 on ELI5 |
+| <img src="assets/hello-world-128.png" width="56"> | Hello, World | Streaming, latency engineering, tool use, conversation evals | p50 and p95 from end of speech to first audio; task completion over 30 scripted conversations | Hosted speech-to-speech p50 of 1,064 ms on Gemini Live and 1,253 ms on OpenAI Realtime; a text agent at 85% task completion against 31 to 51% for voice agents on clean audio |
+| <img src="assets/needle-in-a-haystack-128.png" width="56"> | Needle in a Haystack | Retrieval engineering, serving, cost, evals | recall@10 and nDCG@10 on 200 or more labelled questions, before and after each retrieval step; p95 latency; dollars per query | bge-small-en-v1.5 at 51.68 on MTEB retrieval, averaged over 15 datasets |
+| <img src="assets/david-vs-goliath-128.png" width="56"> | David vs Goliath | Fine-tuning judgment, evals, cost | Small model versus frontier model on a held-out set; cost ratio per thousand requests | 310 fine-tunes on LoRA Land: 4-bit LoRA models beat GPT-4 by 10 points on average (April 2024) |
 
 ## Sources
 

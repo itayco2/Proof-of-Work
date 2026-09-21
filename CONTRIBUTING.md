@@ -7,8 +7,8 @@ Two kinds of change are welcome here: a result you measured, and a correction to
 If you finished one of the five builds, the row belongs on the board. Open a pull request that adds
 one line to [RESULTS.md](RESULTS.md) and changes nothing else. The five columns are:
 
-- Project, the folder name, one of `01-fixer`, `02-scholar`, `03-concierge`, `04-librarian`,
-  `05-david`.
+- Project, the folder name, one of `01-the-night-shift`, `02-citation-needed`, `03-hello-world`,
+  `04-needle-in-a-haystack`, `05-david-vs-goliath`.
 - Date, the date you produced the number, as `2026-09-21`.
 - Path, `api` or `local`, whichever the run used.
 - Model, the model or models behind the number, with your own repo linked from this cell. The link is

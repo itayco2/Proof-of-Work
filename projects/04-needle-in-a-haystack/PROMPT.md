@@ -1,11 +1,11 @@
-# Librarian: master prompt
+# Needle in a Haystack, the master prompt
 
 Paste this into Claude Code in an empty repository. Answer the interview, approve the plan, then work
 one phase at a time.
 
 ## Goal
 
-Build Librarian, a retrieval system over about one million chunks of real text with a search page,
+Build Needle in a Haystack, a retrieval system over about one million chunks of real text with a search page,
 where every retrieval step is measured on a labelled question set.
 
 Done when: recall@10 and nDCG@10 are reported on at least 200 labelled questions for four

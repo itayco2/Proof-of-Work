@@ -1,10 +1,10 @@
-# Scholar: master prompt
+# Citation Needed, the master prompt
 
 Paste this as the first message to Claude Code in an empty folder.
 
 ## Goal
 
-Build Scholar, a research agent that plans, searches in parallel, writes a cited report, and
+Build Citation Needed, a research agent that plans, searches in parallel, writes a cited report, and
 verifies every citation against the fetched source with a grader that is not the writer. The report
 is markdown with inline `[n]` citations and a sources list. The verifier splits the report into
 sentences, checks each cited sentence against the passage it cites with an entailment model, and

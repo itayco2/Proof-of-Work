@@ -1,10 +1,10 @@
-# David: master prompt
+# David vs Goliath, the master prompt
 
 Paste this into Claude Code in an empty folder. Answer the interview, then work phase by phase.
 
 ## Goal
 
-Build David, a fine-tune of a small open model on one narrow task that is compared, honestly,
+Build David vs Goliath, a fine-tune of a small open model on one narrow task that is compared, honestly,
 against a frontier model on a frozen held-out set. The comparison is the product. A high score on a
 set you cannot prove was clean is worth nothing, so the split comes before the training.
 

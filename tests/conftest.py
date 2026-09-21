@@ -6,7 +6,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PROJECTS = ROOT / "projects"
-EXPECTED = ["01-fixer", "02-scholar", "03-concierge", "04-librarian", "05-david"]
+EXPECTED = [
+    "01-the-night-shift",
+    "02-citation-needed",
+    "03-hello-world",
+    "04-needle-in-a-haystack",
+    "05-david-vs-goliath",
+]
 
 GUIDE_HEADINGS = [
     "What you build",

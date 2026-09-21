@@ -1,6 +1,6 @@
-![Librarian icon](icon.png)
+![Needle in a Haystack icon](icon.png)
 
-# Librarian: RAG at scale, as a live product
+# Needle in a Haystack, RAG at scale, as a live product
 
 ## What you build
 

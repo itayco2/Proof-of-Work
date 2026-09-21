@@ -1,11 +1,11 @@
-# Fixer: master prompt
+# The Night Shift, the master prompt
 
 Paste this into a coding agent in an empty repository. Work one phase at a time and stop at every
 checkpoint.
 
 ## Goal
 
-Build Fixer, a coding agent that takes a GitHub issue, reproduces it in a container, patches, runs
+Build The Night Shift, a coding agent that takes a GitHub issue, reproduces it in a container, patches, runs
 the tests and opens a pull request, scored on SWE-bench Verified-mini.
 
 Done when: the resolved rate on all 50 Verified-mini instances is reported per backend with a 95%

@@ -1,6 +1,6 @@
-![Scholar icon](icon.png)
+![Citation Needed icon](icon.png)
 
-# Scholar: a research agent with verified citations
+# Citation Needed, a research agent with verified citations
 
 ## What you build
 
@@ -16,7 +16,7 @@ printed on the cover.
 ## Why it gets interviews
 
 Agents and orchestration appear in 10 of the 11 job postings behind this repo. Evals appear in all
-11. Scholar is both at once, on a task where a wrong citation is easy to spot and hard to excuse.
+11. Citation Needed is both at once, on a task where a wrong citation is easy to spot and hard to excuse.
 
 Landed, an AI-jobs platform, lists "no eval, just vibes" among the patterns that get a portfolio
 rejected on sight. Chirag Hasija, who has interviewed on both sides of the loop, tells candidates to
