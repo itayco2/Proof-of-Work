@@ -12,11 +12,11 @@ Every project has a $0 path. Four run on your own machine with Ollama and other 
 
 |  | Project | What it is | The number you publish | Weeks |
 |---|---|---|---|---|
-| <img src="assets/fixer-128.png" width="48"> | [Fixer](projects/01-fixer/) | A coding agent scored by a benchmark's own tests | Resolved rate on 50 SWE-bench Verified-mini instances, with a 95% interval | 3 to 4 |
-| <img src="assets/scholar-128.png" width="48"> | [Scholar](projects/02-scholar/) | A research agent whose every cited sentence is checked | Citation precision and recall over 50 questions | 2 to 3 |
-| <img src="assets/concierge-128.png" width="48"> | [Concierge](projects/03-concierge/) | A real-time voice agent that obeys an interruption mid-sentence | p50 and p95 from end of speech to first audio, over 100 turns | 2 to 3 |
-| <img src="assets/librarian-128.png" width="48"> | [Librarian](projects/04-librarian/) | Hybrid retrieval over a million chunks, latency on the page | recall@10 and nDCG@10 on 200 or more labelled questions | 2 to 3 |
-| <img src="assets/david-128.png" width="48"> | [David](projects/05-david/) | A small fine-tune measured against a frontier model | Fine-tuned against a frontier model on 1,000 or more held-out examples, with the cost ratio | 1 to 2 |
+| <img src="assets/fixer-128.png" width="88"> | [Fixer](projects/01-fixer/) | A coding agent scored by a benchmark's own tests | Resolved rate on 50 SWE-bench Verified-mini instances, with a 95% interval | 3 to 4 |
+| <img src="assets/scholar-128.png" width="88"> | [Scholar](projects/02-scholar/) | A research agent whose every cited sentence is checked | Citation precision and recall over 50 questions | 2 to 3 |
+| <img src="assets/concierge-128.png" width="88"> | [Concierge](projects/03-concierge/) | A real-time voice agent that obeys an interruption mid-sentence | p50 and p95 from end of speech to first audio, over 100 turns | 2 to 3 |
+| <img src="assets/librarian-128.png" width="88"> | [Librarian](projects/04-librarian/) | Hybrid retrieval over a million chunks, latency on the page | recall@10 and nDCG@10 on 200 or more labelled questions | 2 to 3 |
+| <img src="assets/david-128.png" width="88"> | [David](projects/05-david/) | A small fine-tune measured against a frontier model | Fine-tuned against a frontier model on 1,000 or more held-out examples, with the cost ratio | 1 to 2 |
 
 ## How to use one
 
@@ -48,6 +48,6 @@ That split is deliberate. A repo that handed you working code would hand every r
 
 ## Licences
 
-MIT for the scripts and tests ([LICENSE](LICENSE)). CC BY 4.0 for the guides, prompts and icons ([LICENSE-CONTENT](LICENSE-CONTENT)). [CONTRIBUTING.md](CONTRIBUTING.md) says what a pull request may change.
+MIT for the scripts and tests ([LICENSE](LICENSE)). CC BY 4.0 for the guides, prompts and icons ([LICENSE-CONTENT](LICENSE-CONTENT)). The five project illustrations were generated with Google Gemini. [CONTRIBUTING.md](CONTRIBUTING.md) says what a pull request may change.
 
 By Itay Cohen, [github.com/itayco2](https://github.com/itayco2).

@@ -1,4 +1,4 @@
-"""Every project folder exists, with its four files, and the README points at each one."""
+"""Every project folder exists, with its three files, and the README points at each one."""
 import pytest
 
 from tests.conftest import EXPECTED, PROJECTS, ROOT, project_dirs, read
@@ -10,11 +10,11 @@ def test_exactly_five_projects():
 
 
 @pytest.mark.parametrize("d", project_dirs(), ids=EXPECTED)
-def test_four_files(d):
-    for name in ["README.md", "PROMPT.md", "icon.svg", "icon.png"]:
+def test_three_files(d):
+    for name in ["README.md", "PROMPT.md", "icon.png"]:
         assert (d / name).exists(), f"{d.name} is missing {name}"
     present = sorted(p.name for p in d.iterdir() if not p.name.startswith(".")) if d.exists() else []
-    assert set(present) <= {"README.md", "PROMPT.md", "icon.svg", "icon.png"}, f"{d.name} has extra files: {present}"
+    assert set(present) <= {"README.md", "PROMPT.md", "icon.png"}, f"{d.name} has extra files: {present}"
 
 
 def test_root_readme_links_every_project():

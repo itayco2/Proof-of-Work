@@ -23,7 +23,7 @@ test:  ## the fast tier only: every guide and prompt against its contract, under
 links:  ## the live link check only (CI runs it weekly)
 	$(PY) scripts/gate.py --links-only
 
-icons:  ## regenerate every icon, the 128 px copies and the banner (CHROME_BIN needed for the PNGs)
+icons:  ## rebuild the 128 px thumbnails and the banner from the five illustrations (needs CHROME_BIN)
 	$(PY) scripts/make_icons.py
 
 clean:  ## remove caches
